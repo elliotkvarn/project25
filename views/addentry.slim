@@ -1,0 +1,10 @@
+h2 create
+- p "test"
+form action="/create" method="post" enctype="multipart/form-data"
+    input type="text" name="entryname" placeholder="Enter entry name"
+    select name="categories"
+        option value="movie" Movie 
+        option value="book" Books 
+    input type="file" name="file"
+    input type="submit" value="upload"
+    
