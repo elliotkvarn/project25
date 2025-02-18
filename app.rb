@@ -11,12 +11,15 @@ get('/') do
 end
 
 get('/add') do
+  p "hej"
   slim(:addentry)
 end
 
 post('/create') do
-
-  db.execute("INTERT INTO entries(img) VALUES ?", [:filename])
+  if params[:file] && params[:file][:filename]
+    filename = params[:file][:filename]
+    file = params[:file][:tempfile]
+  db.execute("INSERT INTO entries(img) VALUES ?", [:filename])
   #skapa sträng
   path = File.join("/public/uploaded_pictures/",params[:file][:filename])
 
