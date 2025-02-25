@@ -1,9 +1,18 @@
 h2 create
 form action="/create" method="post" enctype="multipart/form-data"
     input type="text" name="entryname" placeholder="Enter entry name"
-    select name="categories"
+    input type="text" name="creator" placeholder="Enter creator name"
+    input type="text" name="description" placeholder="Enter description"
+    input type="text" name="releaseyear" placeholder="Enter release year"
+    select name="date2"
+        option value="true" BC
+        option value="false" AD
+    input type="text" name="tags" placeholder="Enter tags, separate with commas"
+    select name="category"
         option value="movie" Movie 
         option value="book" Books 
+        option value="music" Music
+        option value="other" Other
     input type="file" name="file"
     input type="submit" value="upload"
     
